@@ -1,4 +1,4 @@
-# TodoApp
+# Сделал тестовое приложение на элексире и фениксе
 
 To start your Phoenix server:
 
