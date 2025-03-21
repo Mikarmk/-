@@ -1,0 +1,10 @@
+<.simple_form :let={f} for={@changeset} action={@action}>
+  <.error :if={@changeset.action}>
+    Произошла ошибка. Пожалуйста, исправьте ошибки ниже.
+  </.error>
+  <.input field={f[:title]} type="text" label="Название" />
+  <.input field={f[:completed]} type="checkbox" label="Выполнено" />
+  <:actions>
+    <.button>Сохранить</.button>
+  </:actions>
+</.simple_form> 

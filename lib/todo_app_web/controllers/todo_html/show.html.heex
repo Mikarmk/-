@@ -1,0 +1,16 @@
+<.header>
+  Просмотр задачи
+  <:subtitle>Информация о задаче.</:subtitle>
+  <:actions>
+    <.link href={~p"/todos/#{@todo}/edit"}>
+      <.button>Редактировать</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Название"><%= @todo.title %></:item>
+  <:item title="Статус"><%= if @todo.completed, do: "Выполнено", else: "Не выполнено" %></:item>
+</.list>
+
+<.back navigate={~p"/todos"}>Назад к списку задач</.back> 

@@ -1,0 +1,8 @@
+<.header>
+  Редактирование задачи <%= @todo.id %>
+  <:subtitle>Используйте эту форму для редактирования задачи.</:subtitle>
+</.header>
+
+<.todo_form changeset={@changeset} action={~p"/todos/#{@todo}"} />
+
+<.back navigate={~p"/todos"}>Назад к списку задач</.back> 

@@ -1,0 +1,21 @@
+<.header>
+  Список задач
+  <:actions>
+    <.link href={~p"/todos/new"}>
+      <.button>Новая задача</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="todos" rows={@todos} row_click={&JS.navigate(~p"/todos/#{&1}/edit")}>
+  <:col :let={todo} label="Название"><%= todo.title %></:col>
+  <:col :let={todo} label="Статус"><%= if todo.completed, do: "Выполнено", else: "Не выполнено" %></:col>
+  <:action :let={todo}>
+    <div class="sr-only">
+      <.link navigate={~p"/todos/#{todo}/edit"}>Редактировать</.link>
+    </div>
+    <.link href={~p"/todos/#{todo}"} method="delete" data-confirm="Вы уверены?">
+      Удалить
+    </.link>
+  </:action>
+</.table> 

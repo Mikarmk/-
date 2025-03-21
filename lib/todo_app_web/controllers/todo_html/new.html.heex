@@ -1,0 +1,8 @@
+<.header>
+  Новая задача
+  <:subtitle>Используйте эту форму для добавления новой задачи.</:subtitle>
+</.header>
+
+<.todo_form changeset={@changeset} action={~p"/todos"} />
+
+<.back navigate={~p"/todos"}>Назад к списку задач</.back> 
