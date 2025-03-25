@@ -1,6 +1,4 @@
-йц
-кйцйца# Сделал тестовое приложение на элексире и фениксе
-и оно работает...
+# Сделал тестовое приложение на элексире и фениксе и оно работает...
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
